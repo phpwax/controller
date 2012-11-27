@@ -1,0 +1,24 @@
+{
+    "name": "phpwax/controller",
+    "type": "library",
+    "description": "Wax Controller",
+    "keywords": [],
+    "homepage": "http://php-wax.com",
+    "license": "MIT",
+    "authors": [
+        {"name": "Ross Riley","email": "ross@oneblackbear.com"}
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-0": { "Wax\\Controller": "" }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "target-dir": "Wax/Controller"
+}
