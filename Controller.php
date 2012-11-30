@@ -1,5 +1,5 @@
 <?php
-namespace Wax\Dispatch;
+namespace Wax\Controller;
 use Wax\Utilities\Session;
 use Wax\Template\Template;
 
