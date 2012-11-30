@@ -27,21 +27,15 @@ class Controller {
 	
   public $view_paths = array();
 
-	public function __construct($application=false) {
-	  if($application instanceof WaxApplication) {
-	    $this->application = $application;
-	    $this->response = $this->application->response;
-    } else {
-	    $this->response = new Response;
-    }
+	public function __construct($application=false, $request_attributes = []) {
+	  $this->application = $application;
 	  $this->init();    
   }
   
   public function init(){
     $this->class_name=get_class($this);
-    $this->referrer=Session::get('referrer');
-    $this->controller = Url::get("controller");
-    $this->action = Url::get("action");
+    $this->controller = $request_attributes["controller"];
+    $this->action = $request_attributes["action"];
     $this->view_paths();
   }
   
