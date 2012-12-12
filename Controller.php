@@ -15,7 +15,6 @@ class Controller {
   protected $class_name='';
   
   // A reference to the master application object
-  public $application = false;
   public $response = false;
   
   public $controller;
@@ -30,8 +29,7 @@ class Controller {
 	
   public $view_paths = array();
 
-	public function __construct($application=false, $request_attributes = []) {
-	  $this->application = $application;
+	public function __construct($request_attributes = []) {
 	  $this->init($request_attributes);    
   }
   
