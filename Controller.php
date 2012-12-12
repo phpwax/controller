@@ -43,8 +43,8 @@ class Controller {
   }
   
   public function view_paths() {
-    $this->view_paths[]=VIEW_DIR.$this->controller;
-    $this->view_paths[]=VIEW_DIR."shared";
+    //$this->view_paths[]=VIEW_DIR.$this->controller;
+    //$this->view_paths[]=VIEW_DIR."shared";
   }
   
   
