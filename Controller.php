@@ -1,7 +1,10 @@
 <?php
 namespace Wax\Controller;
-use Wax\Utilities\Session;
 use Wax\Template\Template;
+
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 /**
  * @package PHP-Wax
@@ -29,7 +32,7 @@ class Controller {
 
 	public function __construct($application=false, $request_attributes = []) {
 	  $this->application = $application;
-	  $this->init();    
+	  $this->init($request_attributes);    
   }
   
   public function init(){
@@ -110,9 +113,15 @@ class Controller {
   }
   
   
-  public function is_public_method($object, $method) {
-    return WaxApplication::is_public_method($object, $method);
+  /**
+   *  Returns a constructed response
+	 *	@return Response
+ 	 */
+  public function render() {
+    
   }
+  
+
   
 	/**
  	 *	In the abstract class this remains empty. It is overridden by the controller,
