@@ -35,7 +35,7 @@ class Controller {
 	  $this->init($request_attributes);    
   }
   
-  public function init(){
+  public function init($request_attributes){
     $this->class_name=get_class($this);
     $this->controller = $request_attributes["controller"];
     $this->action = $request_attributes["action"];
