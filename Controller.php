@@ -29,8 +29,9 @@ class Controller {
 	
   public $view_paths = array();
 
-	public function __construct($request_attributes = []) {
-	  $this->init($request_attributes);    
+	public function __construct($request_attributes = [], $application = false) {
+	  $this->init($request_attributes);  
+    $this->application = $application;  
   }
   
   public function init($request_attributes){
